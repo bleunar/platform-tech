@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <h1 class="title">Survey Form</h1>
+    <form action="#" method="post">
+        <div class="questions-container">
+            <fieldset>
+                <legend class="question-title"><b>Question 1:</b> How likely are you to recommend our service?</legend>
+                <div class="question-items-container">
+                    <label>
+                        <p>1 - Very Poor</p>
+                        <input type="radio" name="q1" value="1">
+                    </label>
+                    <label>
+                        <p>2 - Poor</p>
+                        <input type="radio" name="q1" value="2">
+                    </label>
+                    <label>
+                        <p>3 - Fair</p>
+                        <input type="radio" name="q1" value="3">
+                    </label>
+                    <label>
+                        <p>4 - Okay</p>
+                        <input type="radio" name="q1" value="4">
+                    </label>
+                    <label>
+                        <p>5 - Great</p>
+                        <input type="radio" name="q1" value="5">
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend class="question-title"><b>Question 2:</b> How satisfied are you with our website's usability?</legend>
+                <div class="question-items-container">
+                    <label>
+                        <p>1 - Very Poor</p>
+                        <input type="radio" name="q2" value="1">
+                    </label>
+                    <label>
+                        <p>2 - Poor</p>
+                        <input type="radio" name="q2" value="2">
+                    </label>
+                    <label>
+                        <p>3 - Fair</p>
+                        <input type="radio" name="q2" value="3">
+                    </label>
+                    <label>
+                        <p>4 - Okay</p>
+                        <input type="radio" name="q2" value="4">
+                    </label>
+                    <label>
+                        <p>5 - Great</p>
+                        <input type="radio" name="q2" value="5">
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend class="question-title"><b>Question 3:</b> How well did our support team address your concern?</legend>
+                <div class="question-items-container">
+                    <label>
+                        <p>1 - Very Poor</p>
+                        <input type="radio" name="q3" value="1">
+                    </label>
+                    <label>
+                        <p>2 - Poor</p>
+                        <input type="radio" name="q3" value="2">
+                    </label>
+                    <label>
+                        <p>3 - Fair</p>
+                        <input type="radio" name="q3" value="3">
+                    </label>
+                    <label>
+                        <p>4 - Okay</p>
+                        <input type="radio" name="q3" value="4">
+                    </label>
+                    <label>
+                        <p>5 - Great</p>
+                        <input type="radio" name="q3" value="5">
+                    </label>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+    <div class="submission-container">
+        <input type="button" value="Submit" class="submit-button" name="feedback_submission" >
+    </div>
+</body>
+
+<style>
+    body{
+        font-family: sans-serif;
+    }
+    .title{
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .questions-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .questions-container fieldset{
+        width: 50%;
+        border: 0.2rem solid black;
+    }
+
+    .question-title{
+        background-color: pink;
+        padding: 0.5rem 1rem;
+        border: 0.2rem solid black;
+        border-radius: 5px;
+        font-size: 1.2rem;
+    }
+
+    .question-items-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .question-items-container label{
+        display: flex;
+        justify-content: start;
+        flex-direction: row-reverse;
+        gap: 1rem;
+    }
+
+    .question-items-container input{
+        margin: 0;
+    }
+
+    .submit-button{
+        background-color: pink;
+        border-radius: 10px;
+        border: 0px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .submission-container{
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+</style>
+
+</html>

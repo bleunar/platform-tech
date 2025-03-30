@@ -1,0 +1,128 @@
+.tae *{
+    /* border: 1px solid red; */
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-image: url('valentine.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+    background-color: rgb(255, 159, 175);
+
+    border-radius: 10px;
+
+    width: 500px;
+    padding: 50px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+}
+
+.chat-container{
+    width: 100%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+    background-color: white;
+
+    /* padding: 10px 20px; */
+
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-message{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 200px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* border-bottom: 1px solid #ccc; */
+    padding:5px;
+}
+
+.chat-message *{
+    font-size: 1.5rem;
+}
+
+.chat-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    gap: 10px;
+}
+
+.message-input{
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+.chat-input-button{
+    /* padding: 5px 10px; */
+    font-size: 1.5rem;
+}
+
+.haha-container{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+.haha-container img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    border: 5px solid rgba(41, 208, 26, 0.992);
+}
+
+.haha-user{
+    margin-left: 20px;
+}
+
+.haha-user h1{
+    margin: 0px;
+}
+.haha-user h4{
+    margin: 0px;
+    font-weight: normal;
+}
+
+.message{
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+.outgoing{
+    text-align: end;
+    background-color: rgba(130, 238, 134, 0.5);
+    border-radius: 3px;
+}
+
+.incoming{
+    text-align: start;
+    background-color: rgba(238, 130, 238, 0.5);
+    border-radius: 3px;
+}

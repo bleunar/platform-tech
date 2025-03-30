@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Module 14 Activity</title>
+
+      <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+      <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+      <div id="root"></div>
+
+      <script type="text/babel">
+            function SurveyProgram() {
+                  const [scores, set_scores] = React.useState([]);
+                  const [show_modal, toggle_modal] = React.useState(false);
+
+                  const handle_score_count = (score) => {
+                        if (score === 5) {
+                              toggle_modal(true);
+                        }
+
+                        set_scores([...scores, score]);
+                  };
+
+                  const handle_close_modal = () => {
+                        toggle_modal(false);
+                  };
+
+                  return (
+                        <div>
+                              <h1>Survey</h1>
+                              <p>Rate your experience</p>
+                              <div className="score-buttons">
+                                    <button className="score-btn" onClick={() => handle_score_count(1)}>1</button>
+                                    <button className="score-btn" onClick={() => handle_score_count(2)}>2</button>
+                                    <button className="score-btn" onClick={() => handle_score_count(3)}>3</button>
+                                    <button className="score-btn" onClick={() => handle_score_count(4)}>4</button>
+                                    <button className="score-btn" onClick={() => handle_score_count(5)}>5</button>
+                              </div>
+                              <h2>Scores: </h2>
+                              {
+                                    scores.length === 0 ?
+                                          (
+                                                <p>No Score Records</p>
+                                          ) : (
+                                                <ul>
+                                                      {scores.map((s, i) => (
+                                                            <li key={i}>{s}</li>
+                                                      ))};
+                                                </ul>
+                                          )
+
+                              }
+
+                              {show_modal && (
+                                    <div className="modal">
+                                          <div class="modal-content">
+                                                <h3>Thank You</h3>
+                                                <p>Feedback is goodshit</p>
+                                                <button className="close-btn" onClick={() => handle_close_modal()}>Close</button>
+                                          </div>
+                                    </div>
+                              )}
+                        </div>
+                  )
+            }
+      </script>
+</body>
+
+</html>
